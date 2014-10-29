@@ -83,7 +83,6 @@ socket.on('connection', function(socket){
 
 
 	socket.on('player interactive',function(data){
-		//{alives: alives, deads:deads}
 		data.alives.forEach(function(position){
 			Game.cells[position[1]][position[0]].Alive();
 		});
