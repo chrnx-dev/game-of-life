@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Game of Life</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed|Roboto+Slab' rel='stylesheet' type='text/css'>
+  <!-- bower:css -->
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="lib/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="modules/game/css/theme.css">
+  <link rel="stylesheet" href="modules/game/css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body class="ng-cloak">
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#!/" class="navbar-brand">Juego de la Vida de Conway</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#!/" >Juego</a></li>
+        <li><a href="#!/acerca">Acerca</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <section class="container" ui-view>
+
+  </section>
+  <!-- bower:js -->
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/angular-mocks/angular-mocks.js"></script>
+  <script src="lib/angular-cookies/angular-cookies.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
+  <script src="lib/angular-touch/angular-touch.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="lib/angular-ui-utils/ui-utils.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <!-- endbower -->
+
+	<script src="/socket.io/socket.io.js"></script>
+
+
+
+  <script src="modules/config.js"></script>
+  <script src="modules/application.js"></script>
+
+  <script src="modules/game/game.module.js"></script>
+  <script src="modules/game/config/game.route.js"></script>
+
+  <!--Livereload script rendered -->
+  <script type="text/javascript" src="http://localhost:35730/livereload.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/*/
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+    font-weight: 400;
+    padding-top: 80px;
+}
+
+h1, h2,h3,h4,h5,h6{
+	font-family: 'Roboto Slab';
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+canvas {
+	margin: 0 auto;
+	display: block;
+	border-radius: 5px;
+	border-color: #ebebeb;
+	border-width: 1px;
+}
