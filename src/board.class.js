@@ -58,9 +58,6 @@ Board.prototype={
 						if(count === 3){
 							Cell.Alive();
 							generation.alive.push([x,y]);
-						}else{
-							Cell.Die();
-							generation.dead.push([x,y]);
 						}
 					}
 				});
