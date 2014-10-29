@@ -95,8 +95,9 @@ socket.on('connection', function(socket){
 });
 
 setInterval(function(){
-	Game.nextGeneration().then(function(){
-		socket.emit('on cycle', Game.cells);
+	Game.nextGeneration().then(function(generation){
+
+		socket.emit('on cycle', generation);
 	});
 }, 200);
 

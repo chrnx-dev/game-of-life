@@ -15,7 +15,7 @@ angular.module('game').directive('game', [
         scope.initBoard(ctx, el);
 
         socket.on('board status', function(Generation) {
-          scope.setCycle(ctx, Generation);
+          scope.setIni(ctx, Generation);
         });
 
         el.on('click', function(e) {

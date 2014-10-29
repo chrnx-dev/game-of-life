@@ -15,23 +15,41 @@ angular.module('game').controller('GameController', ['$scope',
 			});
 		};
 
-		$scope.setCycle = function(ctx, Generation){
-			Generation.forEach(function(row, y){
-	    	row.forEach(function(cell, x){
-	    		if(cell.status){
-						$scope.Alive(ctx,{
-						    x: x,
-						    y: y
-						});
-	    		}else{
-	    			$scope.Dead(ctx,{
-	    			    x: x,
-	    			    y: y
-	    			});
-	    		}
 
-	    	});
-	    });
+		$scope.setIni = function(ctx, Generation){
+			Generation.forEach(function(row, y){
+			    row.forEach(function(cell, x){
+			    if(cell.status){
+						$scope.Alive(ctx,{
+					    x: x,
+					    y: y
+						});
+			  	}else{
+			  		$scope.Dead(ctx,{
+			  		    x: x,
+			  		    y: y
+			  		});
+			  	}
+
+				});
+			});
+		};
+
+		$scope.setCycle = function(ctx, Generation){
+
+			Generation.alive.forEach(function(position){
+				$scope.Alive(ctx,{
+				  x: position[0],
+				  y: position[1]
+				});
+			});
+
+			Generation.dead.forEach(function(position){
+				$scope.Dead(ctx,{
+				  x: position[0],
+				  y: position[1]
+				});
+			});
 
 	    $scope.grid(ctx,{
 	    	width: $scope.width,

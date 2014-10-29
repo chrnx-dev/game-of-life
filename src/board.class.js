@@ -8,6 +8,7 @@ function Board(width, height){
 	this.height = height || 0;
 	this.cells = [];
 	this.players = [];
+
 	for(var yHeight = 0; yHeight  < this.height; yHeight++){
 		this.cells[yHeight] = [];
 		for(var xWidth = 0; xWidth < this.width;  xWidth++){
@@ -39,19 +40,27 @@ Board.prototype={
 		var deferred = q.defer(),
 			self = this,
 			cycle = [],
+			generation = {
+				alive: [],
+				dead: []
+			},
 			task = function(Cell,x,y){
 				return self.getNeighbours(x,y).then(function(count){
 					if(Cell.status){
 						if(count === 2 || count === 3){
 							Cell.Alive();
+							generation.alive.push([x,y]);
 						}else{
 							Cell.Die();
+							generation.dead.push([x,y]);
 						}
 					}else{
 						if(count === 3){
 							Cell.Alive();
+							generation.alive.push([x,y]);
 						}else{
 							Cell.Die();
+							generation.dead.push([x,y]);
 						}
 					}
 				});
@@ -64,7 +73,7 @@ Board.prototype={
 		}, this);
 
 		q.all(cycle).then(function(){
-			deferred.resolve();
+			deferred.resolve(generation);
 		});
 
 		return deferred.promise;
