@@ -10,6 +10,10 @@ angular.module('game').config(['$stateProvider', '$urlRouterProvider', 'cfpLoadi
 		state('home', {
 			url: '/',
 			templateUrl: 'modules/game/views/home.view.html',
+		}).
+		state('acerca', {
+			url: '/acerca',
+			templateUrl: 'modules/game/views/acerca.view.html',
 		});
 	}
 ])
