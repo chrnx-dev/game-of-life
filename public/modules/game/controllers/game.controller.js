@@ -75,7 +75,7 @@ angular.module('game').controller('GameController', ['$scope',
 			options.height = options.height || $scope.height ||0;
 			options.separation = options.separation || 10;
 
-			ctx.strokeStyle = options.color || "#ebebeb";
+			ctx.strokeStyle = options.color || '#ebebeb';
 			ctx.strokeWidth = 1;
 
 			ctx.beginPath();
