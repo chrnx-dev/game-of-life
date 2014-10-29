@@ -26,18 +26,18 @@ Este juego está diseñado bajo las reglas del juego de la vida de Conway, pero 
 
 Después de Instalar **NodeJS** y **NPM**
 
-´´´
+```
 [sudo] npm install -g grunt grunt-cli
 [sudo] npm install -g bower
 npm install
-´´´
+```
 **bower install** se ejecutará solo al terminar **npm install** de manera automática.
 
 ### Ejecución
 
-´´´
+```
 grunt
-´´´
+```
 
 Esto automáticamente iniciará el servidor, además de la generación de la semilla del mundo, a partir de ese momento (y hasta que no se pare el servidor) la vida continuará ejecutándose.
 
