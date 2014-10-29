@@ -43,4 +43,4 @@ Esto automáticamente iniciará el servidor, además de la generación de la sem
 
 ### Visualización
 
-Para visualizar el mundo hay que abrir en el navegador **http://<ip-del-server>:3000** para observar la vida e interactuar con el juego.
+Para visualizar el mundo hay que abrir en el navegador **http://[ip-del-server]:3000** para observar la vida e interactuar con el juego.
